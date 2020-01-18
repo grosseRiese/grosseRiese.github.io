@@ -1,0 +1,42 @@
+audio::-webkit-media-controls-panel {
+    background: #ffffff;
+}
+
+body{
+    padding-top: 5% ;
+}
+
+.card{
+    box-shadow:5px 8px 16px 5px rgba(0,0,0,0.2);
+    width:30%;
+    margin-left: 35%;
+    margin-right: 35%; 
+}
+.responsive-img {
+    max-width: 100%;
+  }
+
+.container{
+    padding:5px;
+
+  }
+
+  h4,p{
+    text-align: center;
+    font-size:2vw; 
+  }
+
+  p{
+    color:rgb(187, 187, 187);
+      
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  audio{
+    max-width: 70%;
+    min-width: 100%;
+  }
+ 
