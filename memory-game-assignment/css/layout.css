@@ -1,0 +1,158 @@
+@import url(//db.onlinewebfonts.com/c/dd7ccd2d8765fb326580f66cc416f7cf?family=Old+Virus);
+@font-face{
+    src:url(myfonts/Virus\ W00\ Lethal.ttf);
+    font-family:'Virus W00 Lethal' ;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+    min-width: 100vh;
+ }
+ 
+body {
+    background-image: radial-gradient(circle, rgb(177, 228, 201), rgb(177, 228, 201), green);
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+nav.menu>h1{
+    text-transform:uppercase;
+    font-family: 'Virus W00 Lethal','Old Virus';
+    color: rgb(13, 113, 122);
+    font-size:4rem;
+}
+
+.intro {
+    grid-column: 1 /-1 ;
+    display: flex;
+    justify-content:center;
+    
+}
+.menu>h1{
+    text-align: center;
+    font-size: 5.2rem;
+}
+.menu>.player-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.player-info>a{
+    text-decoration: none;
+    color: black;
+}
+
+.cards-area {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 10px;
+    margin:5rem;
+    justify-content:center;
+    /*Give a 3D-positioned element some perspective, NOT for IE9 > vs */
+    perspective:500px;
+}
+.card{
+    position: relative;
+    background-color: #529270;
+    height:18rem;
+    width:16rem;
+}
+.card:hover{
+    box-shadow: 8px 8px 10px -5px rgba(1, 54, 52, 0.6);
+    cursor: pointer;
+}
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+    clip-path: polygon(0% 15%, 100% 100%, 15% 0%, 85% 0%, 0 100%, 100% 15%, 100% 85%, 0 0, 85% 100%, 15% 100%, 100% 1%, 0% 85%);
+}
+
+.card.visible .back-side-card{/* test:.card:hover instead .card.visible*/
+    transform: rotateY(-180deg);
+}
+.card.visible .front-side-card{/* test:.card:hover instead .card.visible*/
+    transform: rotateY(0);
+}
+.front-side-card{
+    clip-path: none;
+    background-color:#529270;
+    transform: rotateY(180deg);
+    border-color:rgb(38, 139, 134) ;
+}
+.card-img
+{
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+}
+.front-side-card:hover .card-img{
+      transform: scale(1);
+  }
+  /* If 2cards are same , :hover = blur! .same-deck */
+ .card.same-deck .card-img{
+      animation: blur-img 1s infinite;
+  }
+  @keyframes blur-img {
+    0%,100% {
+/* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  /* Full height */
+  height: 100%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    }
+  }
+.winning-overlay{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-transform:uppercase;
+    font-family: 'Old Virus','Virus W00 Lethal';
+    font-size: 6rem;
+    color: rgb(255, 166, 0);
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 10;
+}
+ .winning-overlay.visible{
+    display: flex;
+    flex-direction: column;
+    animation: expand-overlay 500ms forwards;
+ }
+ @keyframes expand-overlay{
+     from{
+         background-color: rgba(132, 233, 193, 0.55);
+         font-size: 0;
+     }
+     to{
+         background-color: rgba(132, 233, 193, 0.55);;
+         font-size: 10em;
+     }
+ }
+ .winning-overlay-small{
+    font-size: 5rem;
+ }
