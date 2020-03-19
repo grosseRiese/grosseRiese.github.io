@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sunshiney&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+main.gallery {
+    padding: 2rem;
+  }
+   h2, h3, h4, h5, h6 {
+    font-family: 'Audiowide', cursive;
+}
+  .gallery > h1 {
+    font-size: 3rem;
+    font-family: 'Indie Flower','Sunshiney',cursive;
+    margin-bottom: 1rem;
+    color: #333333;
+    font-weight: 900;
+    text-align: center;
+  }
+  .gallery > .gallery__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-rows: repeat(6, 200px);
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+    list-style: none;
+  }
+
+  .gallery > .gallery__list > li:nth-child(4n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .gallery > .gallery__list > li:nth-child(8n) {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+  
+  .gallery > .gallery__list > li > figure {
+    height: 100%;
+    position: relative;
+  }
+
+  .gallery > .gallery__list > li > figure>a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ /*******************************
+ *===============================
+ *      Header-section
+ *===============================
+ *********************************/
+
+ header{ 
+    display: flex;
+    justify-content: center;
+   align-self: center;
+ }
+nav{
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.searchPlace{
+    width: 100%;
+    border: .2rem solid rgba(71, 14, 136, 0.883);
+    border-right: none;
+    padding: .6rem;
+    height: 2rem;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #2c3531;
+    font-size: 2.2rem;
+    margin:1rem 0 0 0;
+}
+.searchPlace:focus{
+    color: rgba(3, 0, 3, 0.726);
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+  }
+  .btn-search{
+    width: 4rem;
+    height: 3.6rem;
+    border: 1px solid rgb(204, 150, 0);
+    background: rgba(216, 185, 8, 0.787);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin:1rem 0 0 0;
+  }
