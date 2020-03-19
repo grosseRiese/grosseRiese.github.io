@@ -27,7 +27,7 @@
         if(searchText){
             url += '&text='+ searchText +'&format=json&nojsoncallback=1&per_page=100'
         }else{
-            url += '&text=stockholm&format=json&nojsoncallback=1&per_page=50'
+            url += '&text=yellowflowers&format=json&nojsoncallback=1&per_page=50'
         }
         await fetch(url, 
             {method: 'GET'}
