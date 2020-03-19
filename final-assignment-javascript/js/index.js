@@ -18,7 +18,7 @@
                                             + '.jpg" alt="default-city"> </figure> </li>';
             //console.log(resultsItemImg);
             ulElem.append(resultsItemImg );
-            /**create iamge in lightbox lightbox**/
+            /**create image in lightbox **/
             resultsItemImg.addEventListener('click', e => {
                 lightbox.classList.add('active');
                 const _img  = document.createElement('img')
