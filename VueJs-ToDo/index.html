@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+   <link rel="stylesheet" href="style.css">
+   <title>Vue Todo App</title>
+</head>
+<body>
+   <main id="app">
+      <div data-reactroot="" class="app-wrapper">
+         <div class="filters-wrapper">
+            <button @click="allTodo"><!--  --> 
+                  <span>ALL <i></i></span>
+            </button>
+            <button @click="finishedTodo" ><!-- --> 
+                  <span>FINISHED</span>
+            </button>
+            <button @click="workingOnTodo"><!--  --> 
+                  <span>WORKING</span>
+            </button>
+         </div>
+         <div class="todos-wrapper">
+            <ul class="todos-list">
+               <li v-for="(todo, index) in todos"  v-bind:key="index" v-bind:class="{done:todo.done}">
+
+                  <button class="remove-todo" @click="removeTodo(index)" class="deleteBtn" >
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+
+                  <span>{{ todo.testTodo }}</span>
+                  <button v-bind:class="todo.done ? 'toggle-todo completed-todo' : 'toggle-todo'" v-model="todo.done" @click="checkTodo(todo)">
+                     <i class="fa fa-check" aria-hidden="true"></i>
+                  </button>
+
+               </li>
+
+            </ul>
+         </div>
+         <div class="form-wrapper">
+
+            <input type="text" v-model="testTodo" v-on:keyup.enter="addTodo" placeholder="To do ...!">
+            <button v-on:click="addTodo">
+               <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </button>
+         <form> </form>
+         </div>
+      </div>
+   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="script.js"> </script>
+</body>
+</html>
