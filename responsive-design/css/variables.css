@@ -1,0 +1,46 @@
+/*********************
+    Google-fonts
+**********************/
+@import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Smythe&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Capriola|Kavoon&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script|Waiting+for+the+Sunrise&display=swap');
+
+/*
+================
+    my 'var':s 
+================
+*/
+:root{
+    /*color-var */
+--main-lill-color:#692d55;
+--main-white-color:#ffffff;
+--main-gray-color:#f2f2f2;
+--main-dark-blue-color:#13293d;
+--main-gray-color:#000000;
+
+--main-red-color:rgba(255, 0, 0, 0.829);
+--main-green-color:rgba(11, 240, 11, 0.897);
+--main-yellow-color:#ffee009d;
+--main-blue-color:rgba(0, 0, 255, 0.87);
+
+/*  sizing var **/
+--main-auto-height:auto;
+--main-max-width:100%;
+--main-min-width:100%;
+--main-fontsize-8:8vw;
+--main-fontsize-6:6vw;
+--main-fontsize-5:5vw;
+--main-fontsize-4:4vw;
+--main-fontsize-3:3vw;
+--main-fontsize-2:2vw;
+--main-fontsize-1:1vw;
+
+--main-font-h1-zhiMangXing :'Zhi Mang Xing', cursive;
+--main-font-p-Smythe:'Smythe', cursive;
+--main-font-h2-kavoon:'Kavoon', cursive;
+--main-font-p-capriola: 'Capriola', sans-serif;
+--main-font-h-Petit-Formal-Script: 'Petit Formal Script', cursive;
+--main-font-p-Waiting-for-the-Sunrise:'Waiting for the Sunrise', cursive;
+
+}
