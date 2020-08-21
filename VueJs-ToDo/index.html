@@ -17,7 +17,9 @@
       <div data-reactroot="" class="app-wrapper">
          <div class="filters-wrapper">
             <button @click="allTodo"><!--  --> 
-                  <span>ALL <i></i></span>
+                  <span>ALL 
+                     <i><span class="badge badge-danger">({{todos.length}})</span></i>
+                  </span>
             </button>
             <button @click="finishedTodo" ><!-- --> 
                   <span>FINISHED</span>
