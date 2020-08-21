@@ -18,14 +18,18 @@
          <div class="filters-wrapper">
             <button @click="allTodo"><!--  --> 
                   <span>ALL 
-                     <i><span class="badge badge-danger">({{todos.length}})</span></i>
+                     <i><span class="badge badge-danger">({{countAllToDosLength()}}) </span></i>
                   </span>
             </button>
             <button @click="finishedTodo" ><!-- --> 
-                  <span>FINISHED</span>
+                  <span>FINISHED
+                     <i><span class="badge badge-danger">({{countCheckedToDosLength()}}) </span></i>
+                  </span>
             </button>
             <button @click="workingOnTodo"><!--  --> 
-                  <span>WORKING</span>
+                  <span>WORKING 
+                     <i><span class="badge badge-danger">({{count_Un_CheckedToDosLength()}})</span></i>
+                  </span>
             </button>
          </div>
          <div class="todos-wrapper">
@@ -46,12 +50,12 @@
             </ul>
          </div>
          <div class="form-wrapper">
-
-            <input type="text" v-model="testTodo" v-on:keyup.enter="addTodo" placeholder="To do ...!">
-            <button v-on:click="addTodo">
-               <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </button>
-         <form> </form>
+            <form> 
+               <input type="text" v-model="testTodo" v-on:keyup.enter="addTodo" placeholder="To do ...!">
+               <button v-on:click="addTodo">
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
+               </button>
+            </form>
          </div>
       </div>
    </main>

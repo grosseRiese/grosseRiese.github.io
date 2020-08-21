@@ -50,10 +50,20 @@ let app = new Vue({
     },
     finishedTodo(){
       let checkedTodo = JSON.parse(localStorage.getItem('todos')).filter(d=>d.done === true);
-
       this.todos = checkedTodo;
       console.log(this.todos);
     }, 
-
+    countCheckedToDosLength(){
+      let checkedLength = JSON.parse(localStorage.getItem('todos')).filter(d=>d.done === true);
+      return checkedLength.length;
+    },
+    countAllToDosLength(){
+      let checkedAllLength = JSON.parse(localStorage.getItem('todos'));
+      return checkedAllLength.length;
+    },
+    count_Un_CheckedToDosLength(){
+      let unCheckedLength = JSON.parse(localStorage.getItem('todos')).filter(d=>d.done === false);
+      return unCheckedLength.length;
+    },
   }
 });
