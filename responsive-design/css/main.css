@@ -35,6 +35,7 @@
     flex-direction: column;
     background-color: #f2f2f2;
 }
+
 .menu-item{
     display:none;
 }
@@ -231,6 +232,9 @@ nav ul li a span i{
         background-color: #692d552f;
         max-width: 100%;
         padding:2rem 0;
+    }
+    .header nav{
+        position:fixed;
     }
     .fas.fa-bars{
         display:none;
