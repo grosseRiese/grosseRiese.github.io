@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Righteous&family=Underdog&display=swap');
+
+body{
+ background-image: url('img/1920wX2996h.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    opacity: 0.75;
+    background-position: center;
+    background-size: cover;
+
+}
+.title-app{
+ text-align: center;
+ font-size: 2.6rem;
+ color:rgb(14, 129, 100);
+ font-family: 'Underdog', cursive;
+}
+
+.grid{
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ grid-template-rows: auto; 
+ grid-gap:1.5rem;
+ padding-left: 0.4rem;
+ padding-right: 0.6rem;
+}
+
+.items{
+ background-color:#5F9EA0;
+ border-left-style: solid;
+ border-color:rgb(12, 214, 197);
+ border-width: 2rem;
+ border-radius: 0.2rem;
+}
+article.items{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.item:hover{
+ opacity: 0.7;
+}
+.header-h3,
+.item-id,
+.item-amount{
+ color:rgb(244, 247, 246);
+ padding:5px
+}
+.head-line{
+  border-color:rgba(148, 146, 30, 0.63);
+  border-width: 0.9rem;
+}
+.span-lead-text{
+ color:rgb(110, 109, 9);
+ font-family: 'Londrina Solid', cursive;
+ font-size: 1.3rem;
+}
+b{
+ padding-left: 1rem;
+ font-family: 'Righteous', cursive;
+ letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    grid-gap: 0.5rem;
+    padding-left: 0.4rem;
+    padding-right: 0.6rem;
+   }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto; 
+    grid-gap: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.6rem;
+   }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto; 
+    grid-gap: 1.3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.6rem;
+   }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto; 
+    grid-gap: 1.3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.6rem;
+   }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto; 
+    grid-gap: 1.5rem;
+    padding-left: 0.4rem;
+    padding-right: 0.6rem;
+   }
+}

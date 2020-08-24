@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+<style>
+ 
+</style>
+</head>
+  <body>
+    <h1 class="title-app">Dogs -API-*</h1>
+    <hr class="head-line">
+    <main class="grid" id="app">
+      <fetch-dog-data 
+          class="items"
+          v-for="dog in hundar"
+          v-bind:key="dog.id"
+          v-bind:dog="dog"
+      > </fetch-dog-data>
+    </main>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="app.js"></script>
+  </body>
+</html>
+
