@@ -237,14 +237,14 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-							let d = new Date();
+							let datum = new Date();
 							let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 							let htmlCopyFootYear = document.querySelector('#footer-date-year');
 							let htmlCopyFootMonth = document.querySelector('#footer-month');
 
-							htmlCopyFootYear.innerHTML = d.getFullYear();
-							htmlCopyFootMonth.innerHTML = months[d.getMonth()];
+							htmlCopyFootYear.innerHTML = datum.getFullYear();
+							htmlCopyFootMonth.innerHTML = months[datum.getMonth()];
 			</script>
 	</body>
 </html>
