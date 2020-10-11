@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doggy Care</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
+/>
+  <link rel="stylesheet" href="./assets/main.css">
+</head>
+<body>
+  <main id="app">
+    <nav id="nav">
+      <router-link to="/" class="nav-route">Home  </router-link><span class="nav-route"> |</span>
+      <router-link to="/dogs" class="nav-route">Dogs</router-link>
+    </nav>
+    <router-view :dogs="dogs"/>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+  <script src="https://unpkg.com/vue-router@2.0.0"></script>
+  <!----> <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+  <script src="app.js"> </script>
+</body>
+</html>
