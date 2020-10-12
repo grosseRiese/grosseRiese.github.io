@@ -236,7 +236,7 @@
 			<div id="footer">
 				<!-- Copyright -->
 					<ul class="copyright">
-									<li> &copy; <b id='footer-month'></b>, <b id='footer-date-year'></b></li>
+									<li> &copy; <b id='footer-day'></b>, <b id='footer-month'></b>, <b id='footer-date-year'></b> </li>
 									<li> <i style="font-weight: bold;">GrosseRiese.</i></li>
 									<li>All rights reserved.</li>
 					</ul>
@@ -249,15 +249,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-							let datum = new Date();
-							let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-							let htmlCopyFootYear = document.querySelector('#footer-date-year');
-							let htmlCopyFootMonth = document.querySelector('#footer-month');
-
-							htmlCopyFootYear.innerHTML = datum.getFullYear();
-							htmlCopyFootMonth.innerHTML = months[datum.getMonth()];
-			</script>
+			<script src="assets/js/date-now.js"></script>
 	</body>
 </html>
