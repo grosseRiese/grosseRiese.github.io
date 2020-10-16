@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|Source+Sans+Pro:600,700&display=swap');
+/******
+=================== APP ================================
+*****/
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+#app p,label {
+  font-family: "PT mono";
+}
+
+#nav{
+  background-color: rgba(241, 179, 97, 0.801);
+  width: 100%;
+  padding: 2.4rem;
+  display: flex;
+  margin-bottom: 3rem;
+
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,.4);
+  overflow: hidden;
+
+}
+.nav-route ,a{
+  text-decoration: none;
+  display: block;
+  padding: 0 1.7em;
+  color: rgb(211, 11, 127);
+  font-size: 2.4vw;
+  font-weight: 900;
+}
+
+
+/**************** CARD **********************/
+.card-component {
+  max-width: 24rem;
+  height: 14rem;
+  border-radius: .6rem;
+  background: #eee;
+  padding: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.4);
+  display: grid;
+  gap: 0.5rem 0;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 2.8rem;
+  text-shadow: -1px -1px 2px rgba(255, 255, 255, .4);
+  position:relative;
+}
+.card-component .img-header{
+  display: flex;
+  grid-column: auto / span 2;
+  grid-row: auto / span 2;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card-component .img-header img,
+.card-component .img-header .img {
+  opacity: .8;
+}
+
+.card-component .img-header [alt="chip"] { 
+align-self: flex-end;
+opacity: 1;
+    position: absolute;
+}
+.card-component .card-Number{
+grid-column: auto / span 2;
+grid-row: auto / span 1;
+display: flex;
+font-size: 1.6rem;
+letter-spacing: .05rem;
+padding: .5rem 0 0 0;
+text-transform: uppercase;
+}
+.card-component .details{
+  display: flex;
+  grid-column: auto / span 2;
+  grid-row: auto / span 1;
+}
+.card-component .details aside span {
+  display: block;
+  text-transform: uppercase;
+  font-size: .7rem;
+  margin: 0 0 .25rem 0;
+}
+.card-component .details aside p {
+    display: block;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+.card-component .details .valid-info span,.valid-info p {
+  text-align: right;
+}
+
+.card-component .details aside.holder-info {
+    flex: 1;
+    text-align: left;
+}
+.card-component .delete-btn {
+  position: absolute;
+  right: -1.6rem;
+  top: 10%;
+  text-align: center;
+  cursor: pointer;
+  height:1rem;
+  width:1rem;
+}
+/**************************************************/
+
+/*************************HOME *******************************/
+section.home {
+  min-width: 378px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+section.home .btn {
+  width: 100%;
+  border: black .125rem  solid;
+  padding: 1.2rem 2.6rem;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: .5rem;
+  word-spacing: 0.6rem;
+  font-size: 1rem;
+  background:#fff;
+  color: #000;
+  box-sizing: border-box;
+  margin: 2rem 0;
+  grid-column: auto / span 2;
+}
+section.home .btn:hover {
+  background: #000;
+  color: #ddd;
+}
+section.home .btn:active {
+  background: #000;
+  color: #FFF;
+}
+
+/*************************************************/
+/*******************ADD-CARD******************************/
+.add-card {
+  min-width: 378px;
+  max-width: 378px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-card .home-route{
+  text-decoration: none; 
+  display: flex;
+  justify-content: center;
+  }
+  .add-card .home-route .home-btn{
+    display:block;  
+    width: 20%; 
+}
+
+/**********************************************************/
+/***************************CARD-FORM ************************************/
+.card-form {
+  margin: 2rem 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+}
+.card-form label {
+  padding: 0.25rem 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-align:left;
+}
+.card-form input, select {
+    border: .125rem solid black;
+    border-radius: .25rem;
+    padding: .5rem;
+    height: 2.6rem;
+    margin: 0 0 .8rem 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    width: 100%;
+}
+.card-form .valid-Info{
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.card-form .col-grid-2 {
+    grid-column: auto / span 2;
+}
+.card-form .col-grid-1 {
+    grid-column: auto / span 1;
+}
+.card-form .validate-input{
+  grid-column: auto / span 2;
+}
+.card-form .valid-my{
+  text-align: left;
+  grid-column: auto / span 1;;
+}
+.card-form .valid-ccv{
+  text-align: left;
+  grid-column: auto / span 1;
+}
+.card-form .btn {
+  width: 100%;
+  border: black .125rem  solid;
+  padding: 1.2rem 2.6rem;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: .5rem;
+  word-spacing: 0.6rem;
+  font-size: 1rem;
+  background:#fff;
+  color: #000;
+  box-sizing: border-box;
+  margin: 2rem 0;
+  grid-column: auto / span 2;
+}
+.card-form .btn:hover {
+  background: #000;
+  color: #ddd;
+}
+.card-form .btn:active {
+  background: #000;
+  color: #FFF;
+}
+/************************************************/
+/***************CARD-STACK*********************************/
+.card-stack {
+  margin: 3rem 0 12rem 0;
+  display: grid;
+  grid-auto-rows: 2.6rem;
+}
+.card-stack .card-component:hover {
+  cursor: pointer;
+  top: -4rem;
+}
+/**********************************************/
+/********************TOP********************************/
