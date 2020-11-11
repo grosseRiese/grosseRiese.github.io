@@ -1,0 +1,84 @@
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}
+#find-me {
+    background-color: #051603c7;
+    border: none;
+    color: white;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0.4rem 0.2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+#find-me:hover {
+  background-color: #4db43fbb;
+    border: none;
+    color: black;
+}
+main p,small,section{
+  text-align: center;
+}
+iframe{
+  margin:auto;
+  width:80vw;
+  height:25rem;
+}
+#geo-info,small a{
+  text-decoration: none;
+  list-style: none;
+}
+#geo-info{
+  margin: 0 auto;
+  width: 40vw;
+}
+small > a{
+  color: rgb(226, 109, 31);
+  font-size: x-large;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+small > a:hover{
+  color: rgb(6, 50, 226);
+}
+
+section h3{
+  color:rgb(80, 172, 6);
+  font-size: large;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.li-info-class {
+  display: flex;
+  background-color: rgba(198, 255, 238, 0.768);
+  flex-direction: column;
+  align-items:stretch;
+  width: 40vw;
+  border-radius: 5px;
+}
+section ul li span {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding:0.1rem 2.5rem;
+  border-bottom:0.1567rem dotted rgb(124 202 185);
+}
+section ul li span:first-child {
+  margin-top:2vh;
+}
+section ul li span > i{
+  justify-self: start;
+  font-size: large;
+  font-weight: 600;
+  color: rgba(81, 172, 6, 0.864);
+}
+section ul li span > b{
+  justify-self: start;
+  font-size: large;
+  font-weight: 600;
+  color: rgba(226, 109, 31, 0.864);
+}
