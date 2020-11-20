@@ -4,14 +4,13 @@ const assetsArr = [
   '/',
   '/Geolocation API/',
   '/Geolocation API/index.html',
-  '/Geolocation API/js/service-worker.js',
   '/Geolocation API/js/app.js',
   '/Geolocation API/assets/icons/vue-logo-192.png',
   '/Geolocation API/assets/icons/vuejs-log-512.png',
   '/Geolocation API/assets/main.css',
   '/Geolocation API/assets/icons/favicon.ico',
-  '/Geolocation API/sw.js',
   '/Geolocation API/manifest.json',
+  'https://geocode.xyz/',
 ];
   //install event
 self.addEventListener('install', evt => {
