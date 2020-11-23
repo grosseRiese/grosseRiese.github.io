@@ -1,4 +1,4 @@
-const staticCacheName = "site-static-geo-v2.4.2";
+const staticCacheName = "site-static-geo-v2.4.3";
 
 const assetsArr = [
   '/',
