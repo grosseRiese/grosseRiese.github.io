@@ -1,0 +1,14 @@
+{
+  "name": "instablam",
+  "version": "1.0.0",
+  "description": "1. [Uppdragsbeskrivning](#1-uppdragsbeskrivning) 1. [Inlämning](#2-inlämning) 1. [Bedömning](#3-bedömning)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OMRAN",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  }
+}
