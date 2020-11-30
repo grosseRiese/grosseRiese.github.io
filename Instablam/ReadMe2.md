@@ -3,14 +3,14 @@ Min resultat på tabell:
 
 |Webbläsare      |Geolocation |MediaDevices |Notification |Offline |Push |
 |----------------|--------|-|-|-|-|
-|Desktop Chrome  |✔️| Ja |
-|Mobil Chrome    |✔️| Ja |
+|Desktop Chrome  |✔️| Ja |✔️| Ja |
+|Mobil Chrome    |✔️| Ja |✔️| Ja |
 |Desktop Firefox |❔| Inte testat |
 |Mobil   Firefox |❔| Inte testat |
 |Desktop Safari  |❔|Inte testat|
 |Mobil   Safari  |❔|Inte testat|
-|Desktop Edge    |✔️|Ja|
-|Mobil   Edge    |✔️|Ja|
+|Desktop Edge    |✔️|Ja|✔️| Ja |
+|Mobil   Edge    |✔️|Ja|✔️| Ja |
 
 ####  Lighthouse - testing
 Lighthouse resultatet:
