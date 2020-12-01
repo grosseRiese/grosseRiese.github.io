@@ -1,24 +1,12 @@
 const staticCacheName = "Instablam-site-static-v2.2.4";
 
 const assetsArr = [
-  '/',
-  '/Instablam/',
-  '/Instablam/index.html',
-  '/Instablam/js/app.js',
-  '/Instablam/js/capturePhoto.js',
-  '/Instablam/js/show-notification.js',
-  '/Instablam/js/video.js',
-  '/Instablam/js/geocode-data.js',
-  '/Instablam/assets/icons/videocam-24px.svg',
-  '/Instablam/assets/icons/videocam_off-24px.svg',
-  '/Instablam/assets/icons/add_a_photo-24px.svg',
-  '/Instablam/assets/icons/download-solid.svg',
-  '/Instablam/assets/icons/logoInstaBlam192.png',
-  '/Instablam/assets/icons/logoInstaBlam512.png',
-  '/Instablam/assets/main.css',
-  '/Instablam/assets/icons/favicon.ico',
-  '/Instablam/manifest.json',
-  'https://geocode.xyz/',
+  '/index.html',
+  '/assets/icons/logoInstaBlam192.png',
+  '/assets/icons/logoInstaBlam512.png',
+  '/assets/main.css',
+  '/assets/icons/favicon.ico',
+  '/manifest.json',
 ];
   //install event
 self.addEventListener('install', evt => {
