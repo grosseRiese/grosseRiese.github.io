@@ -1,4 +1,4 @@
-const staticCacheName = "Instablam-site-static-v2.2.7";
+const staticCacheName = "Instablam-site-static-v2.2.8";
 
 const assetsArr = [
   '/index.html',
