@@ -74,6 +74,7 @@ export function loopSrcPIc (capturesII){
             imgLI.setAttribute('crossOrigin','Anonymous');
         let link = document.createElement('a');
             link.setAttribute('id',id);
+            link.setAttribute('class','download-link');
             link.innerHTML = '<span class="dwn-img-png"></span>';
             link.addEventListener('click', function(ev) {
               link.href = canvas.toDataURL();

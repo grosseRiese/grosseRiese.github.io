@@ -21,29 +21,40 @@ margin: 0.6rem;
   
 }
 .dwn-img-png{
-    background-color: #21bcdbc7;
-    border: none;
-    color: white;
-    padding: .5rem ;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2rem;
-    margin: 0.4rem ;
-    cursor: pointer;
-    border-radius: 0.5rem;
-    background: url(./icons/download-solid.svg);
+  background-color: #21bcdbc7;
+  border: none;
+  color: white;
+  padding: 0.3rem ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0.3rem ;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background: url(./icons/download-solid.svg);
 }
 .dwn-img-png:hover {
   background-color: #4db43fbb;
-    border: none;
-    padding: .7rem ;
-    color: black;
+  border: none;
+  padding: 0.586rem ;
+  color: black;
 }
 .download-img:hover {
   opacity: 0.3;
   cursor: pointer;
 }
+.download-img{
+  border-right: 1.5rem solid #fff;
+  margin:0.5rem;
+  position: relative;
+}
+.download-link{
+  position: absolute;
+  margin-left:-33px;
+  margin-top:5px;
+}
+
 .btns-area{
   margin:0.5rem;
   padding-top:0.2rem
