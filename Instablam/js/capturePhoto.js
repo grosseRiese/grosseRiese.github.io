@@ -9,11 +9,11 @@ export const msgBfrUl       = document.querySelector('.message-ul');
 export let latitude         = '',
             longitude       = '';
 export const captures       = [];
-        let count            = 1;
+        let count           = 1;
         let picData ;
 export const takePic = () => {
-  const status        = document.querySelector('#status');
-  const canvas        = document.querySelector('#canvas'); 
+  const status       = document.querySelector('#status');
+  const canvas       = document.querySelector('#canvas'); 
   let dateFormat     = getDate();
 
   if(!navigator.geolocation) {
@@ -27,13 +27,12 @@ export const takePic = () => {
             canvas.getContext("2d").drawImage(video, 0, 0, 240, 180);
             let imgUrl = canvas.toDataURL("image/png");
             captures.push(imgUrl);
-
            // let picData ;
-            picData = captures.map(item => {
+            picData = captures.map((item) => {
                 let obj = {
                   "id"        : count++,
-                  "latitude"  :latitude.toFixed(2),
-                  "longitude" :longitude.toFixed(2),
+                  "latitude"  : latitude.toFixed(2),
+                  "longitude" : longitude.toFixed(2),
                   "time"      : dateFormat,
                   "src"       : item
                 };
@@ -59,7 +58,7 @@ export function loopSrcPIc (capturesII){
         
   try {
     ul_li_img.innerHTML ='';
-  let srcNote ='';
+    let srcNote ='';
     capturesII.forEach(i => { // iterate over the element
         let id = getUnikToken();// generate and set id
         let liElm = document.createElement("LI");
@@ -76,9 +75,10 @@ export function loopSrcPIc (capturesII){
             link.setAttribute('id',id);
             link.setAttribute('class','download-link');
             link.innerHTML = '<span class="dwn-img-png"></span>';
-            link.addEventListener('click', function(ev) {
-              link.href = canvas.toDataURL();
-              link.download = "download-foto.png"; 
+            link.addEventListener('click',  function(ev) {
+              //link.href =  canvas.toDataURL();
+              link.href =  i.src;
+              link.download = "download-foto.png";
             }, false);
 
         let myLink      = liElm.appendChild(link);
@@ -114,10 +114,9 @@ export function loopSrcPIc (capturesII){
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
   const getDate = ()=>{
-    let _date = Date();  
-    return _date.toString().substring(0,24);
+    let _date = new Date().toISOString().slice(0,10);  
+    return _date;
   }
-
   //local Storage
   export class Storage{
 
@@ -125,12 +124,9 @@ export function loopSrcPIc (capturesII){
       localStorage.clear();
     }
     static removeLocalPics(evt) {
-      //console.log('Evt remove -localstorage' ,evt);
       let updatedGetPictures = Storage.getPictures().filter(item => item.src !== evt);
-      console.log('updatedGetPictures... : ', updatedGetPictures);
       Storage.savePictures(updatedGetPictures);
       Storage.getPictures();
-      //location.reload();
     }
     static savePictures(captures){
       localStorage.setItem("captures",JSON.stringify(captures));
